@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  resources :users, only: [:show] do
+  get '/' => 'users#index'
+  resources :users, only: [:show, :index] do
     resources :products, only: [:index, :new, :create, :show]
   end
   # The priority is based upon order of creation: first created -> highest priority.

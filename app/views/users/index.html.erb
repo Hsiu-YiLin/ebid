@@ -1,0 +1,9 @@
+<h1> Welcome to Ebid </h1>
+<span><h2> An online auction house for everything</h2></span>
+
+<ul>
+	<% @users.each do |user| %>
+		
+		<li> <%= link_to user.name, user_products_path(:user_id => user.id)  %> </li>
+	<% end %>
+</ul>
