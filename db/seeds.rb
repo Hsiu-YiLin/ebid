@@ -8,6 +8,8 @@
 
 user1 = User.new(name: "Kyle", email: "kyle@greatguy.com")
 user2 = User.new(name: "Jorhey", email: "jorhey@email.com")
+user1.save
+user2.save
 
 user1.products.create(title: "Shoes", description: "It's a good pair of shoes", deadline: DateTime.now + 3.hour)
 user1.products.create(title: "Backpack", description: "You put it on your back", deadline: DateTime.now + 5.day)
